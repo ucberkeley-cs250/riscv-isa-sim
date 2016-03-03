@@ -4,8 +4,8 @@ libdir=${prefix}/@libdir@
 includedir=${prefix}/@includedir@
 
 Name: riscv-sha3
-Description: Sha3
+Description: sha3
 Version: git
-Libs: -Wl,-rpath,${libdir} -L${libdir} -ldummy_rocc
+Libs: -Wl,-rpath,${libdir} -L${libdir} -lsha3
 Cflags: -I${includedir}
 URL: http://riscv.org/download.html#tab_spike

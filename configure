@@ -4195,6 +4195,51 @@ fi
 
     # Add subproject to our running list
 
+    subprojects="$subprojects sha3"
+
+    # Process the subproject appropriately. If enabled add it to the
+    # $enabled_subprojects running shell variable, set a
+    # SUBPROJECT_ENABLED C define, and include the appropriate
+    # 'subproject.ac'.
+
+
+      { $as_echo "$as_me:${as_lineno-$LINENO}: configuring default subproject : sha3" >&5
+$as_echo "$as_me: configuring default subproject : sha3" >&6;}
+      ac_config_files="$ac_config_files sha3.mk:sha3/sha3.mk.in"
+
+      enable_dummy_rocc_sproj="yes"
+      subprojects_enabled="$subprojects_enabled sha3"
+
+$as_echo "#define SHA3_ENABLED /**/" >>confdefs.h
+
+
+
+
+
+
+    # Determine if this is a required or an optional subproject
+
+
+
+    # Determine if there is a group with the same name
+
+
+
+    # Create variations of the subproject name suitable for use as a CPP
+    # enabled define, a shell enabled variable, and a shell function
+
+
+
+
+
+
+
+
+
+
+
+    # Add subproject to our running list
+
     subprojects="$subprojects dummy_rocc"
 
     # Process the subproject appropriately. If enabled add it to the
@@ -4342,6 +4387,8 @@ ac_config_files="$ac_config_files riscv-softfloat.pc"
 ac_config_files="$ac_config_files riscv-dummy_rocc.pc"
 
 ac_config_files="$ac_config_files riscv-spike_main.pc"
+
+ac_config_files="$ac_config_files riscv-sha3.pc"
 
 cat >confcache <<\_ACEOF
 # This file is a shell script that caches the results of configure
@@ -5044,6 +5091,7 @@ do
     "riscv-softfloat.pc") CONFIG_FILES="$CONFIG_FILES riscv-softfloat.pc" ;;
     "riscv-dummy_rocc.pc") CONFIG_FILES="$CONFIG_FILES riscv-dummy_rocc.pc" ;;
     "riscv-spike_main.pc") CONFIG_FILES="$CONFIG_FILES riscv-spike_main.pc" ;;
+    "riscv-sha3.pc") CONFIG_FILES="$CONFIG_FILES riscv-sha3.pc" ;;
 
   *) as_fn_error $? "invalid argument: \`$ac_config_target'" "$LINENO" 5;;
   esac
